@@ -1,9 +1,7 @@
 import pandas as pd
 import streamlit as st
-
 import requests
 import json
-import pandas as pd
 
 def bunjang(word, pages):
     # file_path = "./bunjang_result/" + word + '.json'
