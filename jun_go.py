@@ -37,11 +37,6 @@ def bunjang(word, pages):
 
         bunjang = bunjang_df.to_dict("records")
 
-        # with open(file_path, 'w', encoding='UTF-8-sig') as file:
-        #        file.write(json.dumps(bunjang, ensure_ascii=False, indent="\t"))
-
         return bunjang_df
 
-# if __name__ == "__main__":
-bunjang_df = bunjang(input(), 1)
-st.dataframe(bunjang_df)
+st.dataframe(bunjang(input(), 1))
