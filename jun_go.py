@@ -3,6 +3,8 @@ import streamlit as st
 import requests
 import json
 
+st.write('Hello World!')
+
 def bunjang(word, pages):
     # file_path = "./bunjang_result/" + word + '.json'
 
