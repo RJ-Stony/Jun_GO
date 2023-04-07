@@ -47,7 +47,7 @@ def bunjang(word, pages):
         bunjang_df['url'] = 'https://m.bunjang.co.kr/products/'+ bunjang_df['pid']
         bunjang_df.drop(['pid'], axis=1)
 
-        bunjang = bunjang_df.to_dict("records")
+        bunjang_df = bunjang_df.astype({'price':'int', 'view_counts':'int'})
 
         # with open(file_path, 'w', encoding='UTF-8-sig') as file:
         #        file.write(json.dumps(bunjang, ensure_ascii=False, indent="\t"))
