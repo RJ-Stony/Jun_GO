@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import requests
+import altair as alt
 
 #def activate_sidebar(df):
 #    with st.sidebar:
@@ -59,6 +60,7 @@ word = st.text_input('Keyword', '아이폰')
 bunjang_df = bunjang(word, 1)
 st.write(bunjang_df)
 
-bunjang_df.sort_values(by=['price'], axis=0, inplace=True)
-
-st.bar_chart(data=bunjang_df, x='title', y='price')
+st.write(alt.Chart(bunjang_df).mark_bar().encode(
+    x = alt.X('view_counts', sort=None),
+    y = 'price',
+))
