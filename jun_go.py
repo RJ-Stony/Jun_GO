@@ -55,6 +55,6 @@ def bunjang(word, pages):
         return bunjang_df
 
 # if __name__ == "__main__":
-word = st.text_input('Keyword', '예) 아이폰')
+word = st.text_input('Keyword', '아이폰')
 bunjang_df = bunjang(word, 1)
 st.write(bunjang_df)
