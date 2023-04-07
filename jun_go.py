@@ -61,6 +61,6 @@ bunjang_df = bunjang(word, 1)
 st.write(bunjang_df)
 
 st.write(alt.Chart(bunjang_df).mark_bar().encode(
-    x = alt.X('title', sort=None),
+    x = alt.X('title', sort='-y'),
     y = 'price',
 ))
