@@ -58,3 +58,5 @@ def bunjang(word, pages):
 word = st.text_input('Keyword', '아이폰')
 bunjang_df = bunjang(word, 1)
 st.write(bunjang_df)
+
+st.bar_chart(data=bunjang_df, x=bunjang_df.title, y=bunjang_df.price)
